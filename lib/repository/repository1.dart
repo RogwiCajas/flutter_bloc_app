@@ -5,10 +5,10 @@ class Repository1 {
 
   final Service1 _pokemonService;
 
-  Future<String> getPoke() async {
+  Future<String> getPoke(String pokemon) async {
     final String name;
 
-    final Map<String, dynamic> res = await _pokemonService.getPokemon();
+    final Map<String, dynamic> res = await _pokemonService.getPokemon(pokemon);
 
     name = res["name"];
     return name;
